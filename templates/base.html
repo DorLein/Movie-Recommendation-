@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='movie-line.png') }}">
+    <title>
+      {% block title %}
+      MovieRecommender - Movie Recommandations App
+      {% endblock title%}
+    </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/49baa12a73.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+   {% block section %}
+  <a href="/" class="logo"><i class="ri-movie-fill"></i><span>MovieRecommender</span></a>
+        <ul class="navbar">
+            <li><a href="/" >Home</a></li>
+            <li><a href="/#search_form" >Search</a></li>
+            <li><a href="/newsletter">Newsletter</a></li>
+        </ul>
+
+        <div class="main">
+            <a href="/login" class="user"><i class="ri-user-fill"></i><span>Sign In</span></a>
+            <a href="/signup">Register</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    {% endblock section %}
+    </header>
+
+      {% block content %}
+          <h1>BASE</h1>
+          <p>This is page base page</p>
+      {% endblock content %}
+    
+    <footer>
+        <div class="container grid">
+          <div class="legal">
+            <p class="container">Copyright &copy; 2023 Copyright Holder All Rights Reserved.</p>
+          </div>
+    
+          <div class="box">
+            <div class="icon">
+                <a href="#"><i class="fa fa-facebook-f"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      
+      <script type="text/javascript" src="{{ url_for('static', filename='script.js')}}"></script>
+    <script>
+      function set_active(element) {
+    // Supprime la classe "active" de tous les éléments <a>
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].classList.remove('active');
+    }
+  
+    // Ajoute la classe "active" à l'élément cliqué
+    element.classList.add('active');
+  }
+  </script>
+</body>
+</html>

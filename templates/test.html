@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommandation de films</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='test.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Recommandation de films</h1>
+        <form action="{{ url_for('recommend') }}" method="post">
+            <label for="movie_name">Entrez le nom de votre film préféré :</label>
+            <input type="text" id="movie_name" name="movie_name" required>
+            <button type="submit">Recommander</button>
+        </form>
+        {% if recommendations %}
+        <h2>Films recommandés pour "{{ movie_name }}" :</h2>
+        <div class="card-container">
+            {% for movie in recommendations %}
+            <div class="card">
+                <h3>{{ movie }}</h3>
+                <p class="details">Informations supplémentaires sur le film...</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock title %}
+
+
+{% block section %}
+    <a href="/" class="logo"><i class="ri-movie-fill"></i><span>MovieRecommender</span></a>
+    <ul class="navbar">
+        <li><a href="/" >Home</a></li>
+        <li><a href="/#search_form" >Search</a></li>
+        <li><a href="/newsletter">Newsletter</a></li>
+    </ul>
+
+    <div class="main">
+        <a href="/login" class="user" class="active"><i class="ri-user-fill"></i><span>Sign In</span></a>
+        <a href="/signup">Register</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+    {% endblock section %}
+
+{% block content %}
+<div class="login-box">
+    <div class="form-bx">
+        <form method="POST" action="/login" class="form-container">
+
+            <h1 class="form-h1"><span>Login</span> to your account</h1>
+            <table class="form-table">
+                <tr>
+                    <td><label for="username">Username</label></td>
+                    <td class="td-input"><input type="text" placeholder="Enter your username" id="username" name="username" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td class="td-input"><input type="password" placeholder="Enter your password" id="password" name="password" required></td>
+                </tr>
+            </table>
+            <button type="submit" class="primary-btn">Log in</button>
+           
+        </form>
+    </div>
+</div>
+<style>
+    body{
+        background-image: url(../static/movies1.jpg);
+    }
+</style>
+
+{% endblock content %}

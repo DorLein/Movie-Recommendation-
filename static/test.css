@@ -1,0 +1,67 @@
+/* static/style.css */
+
+.card {
+    width: 20%;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+.card .details {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+} */
+
+form {
+    margin: 50px 25px 20px 25px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

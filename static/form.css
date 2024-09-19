@@ -1,0 +1,41 @@
+@import url(style.css);
+body.form-page{
+    background-image:url(movies1.jpg);
+
+}
+.login-box, .signup-box{
+    margin-top: 100px;
+}
+.form-container{
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    margin : 100px 400px 50px 400px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 25px;
+    border: 2px solid var(--main-color);
+}
+.form-h1{
+  color: var(--text-color);
+  margin-bottom: 25px;
+}
+.form-h1 span{
+  color: var(--main-color);
+}
+.form-table td{
+    padding: 10px;
+}
+.form-table tr{
+    display: flex;
+    flex-direction: column;
+}
+.form-table{
+    margin-bottom: 50px;
+}
+.td-input{
+    border: 0.5px solid var(--main-color);
+    border-radius: 15px;
+    background-color: var(--bg-color);
+}

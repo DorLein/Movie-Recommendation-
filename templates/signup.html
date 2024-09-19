@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Sign up{% endblock title %}
+
+{% block section %}
+    <a href="/" class="logo"><i class="ri-movie-fill"></i><span>MovieRecommender</span></a>
+    <ul class="navbar">
+        <li><a href="/" >Home</a></li>
+        <li><a href="/#search_form" >Search</a></li>
+        <li><a href="/newsletter">Newsletter</a></li>
+    </ul>
+
+    <div class="main">
+        <a href="/login" class="user"><i class="ri-user-fill"></i><span>Sign In</span></a>
+        <a href="/signup" class="active">Register</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+    {% endblock section %}
+
+{% block content %}
+<div class="signup-box">
+    <div class="form-bx">
+        <form action="/signup" method="post" class="form-container">
+            <h1 class="form-h1"><span>Signup</span> here</h1>
+            <table class="form-table">
+                <tr>
+                    <td><label for="username">Username</label></td>
+                    <td class="td-input"><input type="text" placeholder="Enter the username you want" id="username" name="username" required></td>
+                </tr>
+                    <td><label for="email">Email</label></td>
+                    <td class="td-input"><input type="email" placeholder="Adresse Email" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="password1">Password</label></td>
+                    <td class="td-input"><input type="password" placeholder="Enter your password" id="password" name="password"></td>
+                </tr>
+            </table>
+            <button class="primary-btn">Signup</button>
+            <h1 class="form-h1">Already have an account?<a href="/login"> <span>Login here</span></a></h1>
+        </form>
+    </div>
+</div>
+<style>
+    body{
+        background-image: url(../static/movies2.jpg);
+    }
+</style>
+{% endblock content %}
