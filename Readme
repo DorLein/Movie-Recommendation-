@@ -1,4 +1,12 @@
-pip install pandas
-pip install scikit-learn
-pip install Flask
-pip install flask-sqlalchemy
+# Film Recommendation Web Application
+
+This project is a simple web application designed to provide film recommendations based on content-based filtering. The application helps users discover new movies by suggesting films similar to those they have enjoyed.
+
+## Key Features
+
+- **Content-Based Filtering:** Analyzes the films that users have liked and provides 10 personalized recommendations for similar movies.
+- **User-Friendly Interface:** Developed using Python, Flask, and Scikit-learn, the application features an easy-to-navigate interface.
+
+## Goal
+
+The goal of this application is to offer users an easy way to find movies that match their tastes and preferences, enhancing their film-watching experience.
